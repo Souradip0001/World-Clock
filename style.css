@@ -1,1 +1,148 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+/* BODY */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #0a0a0f;
+    color: #ffffff;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* BACKGROUND GLOW */
+.background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 30%, #0ff2 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, #f0f2 0%, transparent 40%);
+    z-index: -1;
+}
+
+/* MAIN CONTAINER */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* HEADER */
+.header {
+    text-align: center;
+}
+
+.title {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    animation: neonColorShift 6s infinite alternate;
+}
+
+/* CLOCK SECTION */
+.clock-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+/* GLASS EFFECT */
+.glass {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 25px rgba(0,255,255,0.2);
+}
+
+/* CLOCK CONTAINER */
+.clock-container {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* DIGITAL CLOCK */
+.digital {
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+}
+
+/* ANALOG CLOCK */
+.analog {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 2px solid rgba(0,255,255,0.3);
+    border-radius: 50%;
+}
+
+/* CLOCK HANDS */
+.hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    transform: translateX(-50%);
+}
+
+.hour {
+    width: 4px;
+    height: 50px;
+    background: #fff;
+}
+
+.minute {
+    width: 3px;
+    height: 70px;
+    background: #0ff;
+}
+
+.second {
+    width: 2px;
+    height: 90px;
+    background: #f0f;
+}
+
+/* HIDDEN CLASS */
+.hidden {
+    display: none;
+}
+
+/* CONTROLS */
+.controls {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+select {
+    padding: 5px;
+    border-radius: 8px;
+    border: none;
+    background: #111;
+    color: #0ff;
+}
+
+/* TEXT COLOR ANIMATION */
+@keyframes neonColorShift {
+    0% { color: #00ffff; }
+    50% { color: #ff00ff; }
+    100% { color: #00ff99; }
+}
