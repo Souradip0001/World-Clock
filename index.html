@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon World Clock</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Background -->
+    <div class="background"></div>
+
+    <!-- Main Container -->
+    <div class="app-container">
+
+        <!-- Header -->
+        <header class="header">
+            <h1 class="title">🌍 Neon World Clock</h1>
+        </header>
+
+        <!-- Clock Section -->
+        <section class="clock-section">
+
+            <!-- Glass Clock Container -->
+            <div class="clock-container glass">
+
+                <!-- Digital Clock -->
+                <div id="digitalClock" class="clock digital">
+                    00:00:00
+                </div>
+
+                <!-- Analog Clock -->
+                <div id="analogClock" class="clock analog hidden">
+                    <div class="hand hour"></div>
+                    <div class="hand minute"></div>
+                    <div class="hand second"></div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Controls Section -->
+        <section class="controls">
+
+            <!-- Clock Type -->
+            <div class="control-group">
+                <label>Clock Style</label>
+                <select id="clockType">
+                    <option value="digital">Digital</option>
+                    <option value="analog">Analog</option>
+                </select>
+            </div>
+
+            <!-- Timezone -->
+            <div class="control-group">
+                <label>Timezone</label>
+                <select id="timezone">
+                    <option value="local">Local Time</option>
+                    <option value="UTC">UTC</option>
+                    <option value="Asia/Kolkata">India</option>
+                    <option value="America/New_York">New York</option>
+                    <option value="Europe/London">London</option>
+                    <option value="Asia/Tokyo">Tokyo</option>
+                </select>
+            </div>
+
+            <!-- Animation Mode -->
+            <div class="control-group">
+                <label>Animation</label>
+                <select id="animationMode">
+                    <option value="fade">Fade</option>
+                    <option value="slide">Slide</option>
+                    <option value="random">Random</option>
+                </select>
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- JS Files -->
+    <script src="clock.js"></script>
+    <script src="timezone.js"></script>
+    <script src="animation.js"></script>
+    <script src="ui.js"></script>
+
+</body>
+</html>
