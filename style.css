@@ -12,6 +12,9 @@ body {
     color: #ffffff;
     height: 100vh;
     overflow: hidden;
+    
+  padding-top: env(safe-area-inset-top);
+    
 }
 
 /* BACKGROUND GLOW */
